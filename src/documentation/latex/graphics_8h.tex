@@ -1,0 +1,116 @@
+\doxysection{controller/video/graphics.h File Reference}
+\hypertarget{graphics_8h}{}\label{graphics_8h}\index{controller/video/graphics.h@{controller/video/graphics.h}}
+
+
+File containing the functions to configure and interecat with the video card and the frame buffer.  
+
+
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \"{}VBE.\+h\"{}}\newline
+Include dependency graph for graphics.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{graphics_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \mbox{\hyperlink{graphics_8h_a967432a6c8128a907b937b0f3f4b4472}{set\+\_\+graphic\+\_\+mode}} (uint16\+\_\+t submode)
+\begin{DoxyCompactList}\small\item\em This function sets the graphic mode to the one specified in the submode. It create a reg86\+\_\+t struct and fills it with the necessary information to set the graphic mode. Then, it calls sys\+\_\+int86() to set the graphic mode. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{graphics_8h_ac50005645b76a08eff8126607633420f}{set\+\_\+frame\+\_\+buffer}} (uint16\+\_\+t mode, uint8\+\_\+t \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}frame\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em This function fetches the mode information of the specified mode and uses it to set the frame buffer. It allocates memory for the frame buffer and maps the physical address of the frame buffer to the virtual address of the frame buffer, so that the frame buffer can be accessed and modified. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{graphics_8h_a950e17209d152e8a40ec064a0b201b25}{draw\+\_\+pixel}} (uint16\+\_\+t x, uint16\+\_\+t y, uint32\+\_\+t color, uint8\+\_\+t \texorpdfstring{$\ast$}{*}frame\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em This function draws a pixel in the specified coordinates with the specified color. It calculates the index of the pixel in the frame buffer and copies the color to the frame buffer. \end{DoxyCompactList}\item 
+\Hypertarget{graphics_8h_a985c2ca86c8f87d6dbc5956e34f45faa}\label{graphics_8h_a985c2ca86c8f87d6dbc5956e34f45faa} 
+int() {\bfseries draw\+\_\+rectangle} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t width, uint16\+\_\+t height, uint32\+\_\+t color, uint8\+\_\+t \texorpdfstring{$\ast$}{*}frame\+\_\+buffer)
+\item 
+\Hypertarget{graphics_8h_aaa521edac9abebe26567c6421b0480ab}\label{graphics_8h_aaa521edac9abebe26567c6421b0480ab} 
+int() {\bfseries draw\+\_\+line} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t len, uint32\+\_\+t color, uint8\+\_\+t \texorpdfstring{$\ast$}{*}frame\+\_\+buffer)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{graphics_8h_a9fcc2243068f8e628648febc0909c509}\label{graphics_8h_a9fcc2243068f8e628648febc0909c509} 
+vbe\+\_\+mode\+\_\+info\+\_\+t {\bfseries mode\+\_\+info}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File containing the functions to configure and interecat with the video card and the frame buffer. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{graphics_8h_a950e17209d152e8a40ec064a0b201b25}\label{graphics_8h_a950e17209d152e8a40ec064a0b201b25} 
+\index{graphics.h@{graphics.h}!draw\_pixel@{draw\_pixel}}
+\index{draw\_pixel@{draw\_pixel}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_pixel()}{draw\_pixel()}}
+{\footnotesize\ttfamily int() draw\+\_\+pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint32\+\_\+t}]{color,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{frame\+\_\+buffer }\end{DoxyParamCaption})}
+
+
+
+This function draws a pixel in the specified coordinates with the specified color. It calculates the index of the pixel in the frame buffer and copies the color to the frame buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate of the pixel \\
+\hline
+{\em y} & Y coordinate of the pixel \\
+\hline
+{\em color} & Color of the pixel \\
+\hline
+{\em frame\+\_\+buffer} & Pointer to the frame buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if no errors occurred, 1 otherwise 
+\end{DoxyReturn}
+\Hypertarget{graphics_8h_ac50005645b76a08eff8126607633420f}\label{graphics_8h_ac50005645b76a08eff8126607633420f} 
+\index{graphics.h@{graphics.h}!set\_frame\_buffer@{set\_frame\_buffer}}
+\index{set\_frame\_buffer@{set\_frame\_buffer}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{set\_frame\_buffer()}{set\_frame\_buffer()}}
+{\footnotesize\ttfamily int() set\+\_\+frame\+\_\+buffer (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{frame\+\_\+buffer }\end{DoxyParamCaption})}
+
+
+
+This function fetches the mode information of the specified mode and uses it to set the frame buffer. It allocates memory for the frame buffer and maps the physical address of the frame buffer to the virtual address of the frame buffer, so that the frame buffer can be accessed and modified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Mode to be set \\
+\hline
+{\em frame\+\_\+buffer} & Address of memory of the pointer to the frame buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if no errors occurred, 1 otherwise 
+\end{DoxyReturn}
+\Hypertarget{graphics_8h_a967432a6c8128a907b937b0f3f4b4472}\label{graphics_8h_a967432a6c8128a907b937b0f3f4b4472} 
+\index{graphics.h@{graphics.h}!set\_graphic\_mode@{set\_graphic\_mode}}
+\index{set\_graphic\_mode@{set\_graphic\_mode}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{set\_graphic\_mode()}{set\_graphic\_mode()}}
+{\footnotesize\ttfamily int() set\+\_\+graphic\+\_\+mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{submode }\end{DoxyParamCaption})}
+
+
+
+This function sets the graphic mode to the one specified in the submode. It create a reg86\+\_\+t struct and fills it with the necessary information to set the graphic mode. Then, it calls sys\+\_\+int86() to set the graphic mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em submode} & Submode to be set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if no errors occurred, 1 otherwise 
+\end{DoxyReturn}

@@ -1,0 +1,14 @@
+<map id="collision_detected" name="collision_detected">
+<area shape="rect" id="Node000001" title="This function detects colisions between the cannonball and the towers. It checks if the cannonball is..." alt="" coords="661,31,786,57"/>
+<area shape="rect" id="Node000002" href="$view_8c.html#ab8d579a16a91d68148117bedaaec55ab" title="Bot shooting mechanics." alt="" coords="495,5,604,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="645,35,604,29,605,24,646,30"/>
+<area shape="rect" id="Node000006" href="$view_8c.html#a9426bd7489be1f39f2a8e171c567bea1" title="Player shooting mechanics." alt="" coords="486,56,613,83"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="646,58,614,63,613,57,646,53"/>
+<area shape="rect" id="Node000003" href="$view_8c.html#a7e6baca1b635c8aadd95c4d821cda8fc" title="This function draws the game, in which all other components like the towers, the background and the p..." alt="" coords="351,31,438,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="480,33,439,40,438,34,480,27"/>
+<area shape="rect" id="Node000004" href="$view_8c.html#a8fe6fe827e29e6b0cb98cda00dc38355" title="This function calls one of the other draw functions, depending on the current game state." alt="" coords="186,31,303,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="336,47,304,47,304,41,336,41"/>
+<area shape="rect" id="Node000005" href="$model_8c.html#a2e7983abedd3fae94a24b4775a97210f" title="This function draws a new frame by calling a drawing function from the view.h file...." alt="" coords="5,31,138,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="171,47,138,47,138,41,171,41"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="471,59,439,54,439,49,472,54"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="controller/mouse/i8042.h" name="controller/mouse/i8042.h">
+<area shape="rect" id="Node000001" title="This file contains the definition of the mouse macros to interact with the KBC controller." alt="" coords="62,5,225,32"/>
+<area shape="rect" id="Node000002" href="$mouse_2_k_b_c_8h.html" title="This file contains the definition of the function to interact with the KBC." alt="" coords="5,80,165,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,45,97,81,93,78,122,42"/>
+<area shape="rect" id="Node000003" href="$mouse_8h.html" title="This file contains the definition of the MouseInfo struct and the function to configure and interact ..." alt="" coords="58,155,229,181"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="164,43,178,73,181,90,180,107,169,134,155,156,151,153,164,132,174,106,176,90,173,75,159,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="106,117,136,153,131,156,102,120"/>
+<area shape="rect" id="Node000004" href="$model_8h.html" title="This file contains the definition of the SystemState and MenuState enum and the functions to update t..." alt="" coords="45,229,152,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="130,196,108,230,104,228,126,193"/>
+<area shape="rect" id="Node000005" href="$view_8h.html" title="File containing the functions to draw the game menus, sprites. Also contains the functions to swap an..." alt="" coords="56,304,141,331"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="160,193,169,224,170,241,166,257,146,285,121,306,117,302,142,282,161,255,165,240,164,225,155,195"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="92,271,94,303,89,304,87,271"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="104,289,103,257,108,256,110,289"/>
+</map>

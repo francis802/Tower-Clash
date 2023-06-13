@@ -1,0 +1,13 @@
+<map id="controller/keyboard/i8042.h" name="controller/keyboard/i8042.h">
+<area shape="rect" id="Node000001" title="This file contains the definition of the keyboard macros to interact with the KBC controller." alt="" coords="56,5,187,48"/>
+<area shape="rect" id="Node000002" href="$keyboard_2_k_b_c_8h.html" title="This file contains the definition of the function to interact with the KBC." alt="" coords="108,96,239,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,60,164,94,159,97,139,62"/>
+<area shape="rect" id="Node000003" href="$keyboard_8h.html" title="This file contains the definition of the functions to configure and interact with the keyboard." alt="" coords="5,187,137,229"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="110,63,99,97,77,187,72,185,94,95,105,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="141,151,97,188,93,184,137,147"/>
+<area shape="rect" id="Node000004" href="$model_8h.html" title="This file contains the definition of the SystemState and MenuState enum and the functions to update t..." alt="" coords="161,195,267,221"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="191,151,210,193,206,195,187,154"/>
+<area shape="rect" id="Node000005" href="$view_8h.html" title="File containing the functions to draw the game menus, sprites. Also contains the functions to swap an..." alt="" coords="172,277,256,304"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="208,236,210,277,204,277,202,236"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="220,263,218,222,223,222,225,263"/>
+</map>

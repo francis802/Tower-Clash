@@ -1,0 +1,9 @@
+<map id="controller/mouse/KBC.h" name="controller/mouse/KBC.h">
+<area shape="rect" id="Node000001" title="This file contains the definition of the function to interact with the KBC." alt="" coords="94,5,254,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,111,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,35,92,74,89,69,152,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="135,80,213,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="177,33,177,65,171,65,171,33"/>
+<area shape="rect" id="Node000004" href="$mouse_2i8042_8h.html" title="This file contains the definition of the mouse macros to interact with the KBC controller." alt="" coords="237,80,300,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="192,30,242,69,239,73,189,35"/>
+</map>

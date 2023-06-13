@@ -1,0 +1,17 @@
+<map id="controller/video/graphics.h" name="controller/video/graphics.h">
+<area shape="rect" id="Node000001" title="File containing the functions to configure and interecat with the video card and the frame buffer." alt="" coords="172,5,343,32"/>
+<area shape="rect" id="Node000002" href="$mouse_8h.html" title="This file contains the definition of the MouseInfo struct and the function to configure and interact ..." alt="" coords="5,80,177,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,41,121,82,119,77,214,36"/>
+<area shape="rect" id="Node000003" href="$model_8h.html" title="This file contains the definition of the SystemState and MenuState enum and the functions to update t..." alt="" coords="159,155,266,181"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="252,47,242,81,219,155,214,154,236,79,247,45"/>
+<area shape="rect" id="Node000004" href="$view_8h.html" title="File containing the functions to draw the game menus, sprites. Also contains the functions to swap an..." alt="" coords="170,229,255,256"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="318,36,346,53,369,79,373,93,369,108,359,130,345,150,310,185,273,212,240,231,237,227,270,208,307,181,341,147,354,127,365,106,368,93,365,81,343,58,315,41"/>
+<area shape="rect" id="Node000005" href="$sprite_8h.html" title="This file contains the definition of the Sprite struct and the functions to create and destroy sprite..." alt="" coords="251,80,355,107"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="276,43,297,78,293,81,271,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="126,112,192,152,190,156,123,117"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="107,118,149,180,199,227,195,231,145,183,102,121"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="206,196,208,229,203,229,201,197"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="218,215,217,182,222,182,224,214"/>
+<area shape="poly" id="edge8_Node000005_Node000003" title=" " alt="" coords="278,118,230,156,226,152,274,114"/>
+<area shape="poly" id="edge9_Node000005_Node000004" title=" " alt="" coords="302,122,294,152,280,183,257,210,232,231,229,227,253,207,275,180,289,150,296,121"/>
+</map>

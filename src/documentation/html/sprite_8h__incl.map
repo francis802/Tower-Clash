@@ -1,0 +1,9 @@
+<map id="model/sprite.h" name="model/sprite.h">
+<area shape="rect" id="Node000001" title="This file contains the definition of the Sprite struct and the functions to create and destroy sprite..." alt="" coords="39,5,143,32"/>
+<area shape="rect" id="Node000002" href="$graphics_8h.html" title="File containing the functions to configure and interecat with the video card and the frame buffer." alt="" coords="5,80,177,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,33,94,65,88,65,88,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="7,155,84,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="85,109,63,144,59,141,81,106"/>
+<area shape="rect" id="Node000004" href="$_v_b_e_8h.html" title="Provides macros to use the VBE." alt="" coords="108,155,167,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="101,106,124,141,120,144,97,109"/>
+</map>

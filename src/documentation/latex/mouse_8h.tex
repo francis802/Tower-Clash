@@ -1,0 +1,94 @@
+\doxysection{controller/mouse/mouse.h File Reference}
+\hypertarget{mouse_8h}{}\label{mouse_8h}\index{controller/mouse/mouse.h@{controller/mouse/mouse.h}}
+
+
+This file contains the definition of the \doxylink{struct_mouse_info}{Mouse\+Info} struct and the function to configure and interact with the mouse.  
+
+
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \"{}i8042.\+h\"{}}\newline
+{\ttfamily \#include \"{}KBC.\+h\"{}}\newline
+{\ttfamily \#include \"{}controller/video/graphics.\+h\"{}}\newline
+Include dependency graph for mouse.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{mouse_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_mouse_info}{Mouse\+Info}}
+\begin{DoxyCompactList}\small\item\em This struct contains the information about the mouse to ease the implementation of some of the game\textquotesingle{}s features. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{mouse_8h_a3827dd7e924d260f38f9d045860f1cbd}\label{mouse_8h_a3827dd7e924d260f38f9d045860f1cbd} 
+\#define {\bfseries MOUSE\+\_\+\+MASK}~BIT(2)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{mouse_8h_a5cab36c12945662a62fe124c448d4d27}\label{mouse_8h_a5cab36c12945662a62fe124c448d4d27} 
+int() {\bfseries mouse\+\_\+subscribe\+\_\+interrupts} ()
+\begin{DoxyCompactList}\small\item\em This function subscribes mouse interrupts, using the sys\+\_\+irqsetpolicy() function. \end{DoxyCompactList}\item 
+\Hypertarget{mouse_8h_adaf9bbdd3ddda1b50021f21c37df1c9c}\label{mouse_8h_adaf9bbdd3ddda1b50021f21c37df1c9c} 
+int() {\bfseries mouse\+\_\+unsubscribe\+\_\+interrupts} ()
+\begin{DoxyCompactList}\small\item\em This function unsubscribes mouse interrupts, using the sys\+\_\+irqrmpolicy() function and the hook\+\_\+id\+\_\+mouse variable, fetched from the \doxylink{mouse_8h_a5cab36c12945662a62fe124c448d4d27}{mouse\+\_\+subscribe\+\_\+interrupts()} function. \end{DoxyCompactList}\item 
+\Hypertarget{mouse_8h_a210374b50462acdedab00df64d5cea3c}\label{mouse_8h_a210374b50462acdedab00df64d5cea3c} 
+void() {\bfseries mouse\+\_\+ih} ()
+\begin{DoxyCompactList}\small\item\em This function handles mouse interrupts, using the read\+\_\+\+KBC\+\_\+output() function to get the current byte information. \end{DoxyCompactList}\item 
+void() \mbox{\hyperlink{mouse_8h_a1538254b8ccba2f68e02cc3d5547722c}{mouse\+\_\+sync\+\_\+bytes}} ()
+\begin{DoxyCompactList}\small\item\em Synchronizes mouse bytes. \end{DoxyCompactList}\item 
+\Hypertarget{mouse_8h_aa832040dd305ba3a8401cc3a4e6a4cc4}\label{mouse_8h_aa832040dd305ba3a8401cc3a4e6a4cc4} 
+void() {\bfseries mouse\+\_\+sync\+\_\+info} ()
+\begin{DoxyCompactList}\small\item\em This function updates the mouse information, stored in the mouse\+\_\+info struct, using the information stored in the mouse\+\_\+bytes\mbox{[}3\mbox{]} array. \end{DoxyCompactList}\item 
+int() \mbox{\hyperlink{mouse_8h_a1703c3c5b61eef30d724b15cafd1d75e}{mouse\+\_\+write}} (uint8\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em This function writes a command to the mouse, using the write\+\_\+\+KBC\+\_\+command() function. It tries to write the command a programable number of times, defined by the MAX\+\_\+\+ATTEMPS macro, until it receives an ACK response from the mouse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definition of the \doxylink{struct_mouse_info}{Mouse\+Info} struct and the function to configure and interact with the mouse. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mouse_8h_a1538254b8ccba2f68e02cc3d5547722c}\label{mouse_8h_a1538254b8ccba2f68e02cc3d5547722c} 
+\index{mouse.h@{mouse.h}!mouse\_sync\_bytes@{mouse\_sync\_bytes}}
+\index{mouse\_sync\_bytes@{mouse\_sync\_bytes}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_sync\_bytes()}{mouse\_sync\_bytes()}}
+{\footnotesize\ttfamily void() mouse\+\_\+sync\+\_\+bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Synchronizes mouse bytes. 
+
+This function synchronizes the mouse bytes, using the mouse\+\_\+bytes\mbox{[}3\mbox{]} array and the the current\+\_\+byte variable, fetched with the \doxylink{mouse_8h_a210374b50462acdedab00df64d5cea3c}{mouse\+\_\+ih()} function. \Hypertarget{mouse_8h_a1703c3c5b61eef30d724b15cafd1d75e}\label{mouse_8h_a1703c3c5b61eef30d724b15cafd1d75e} 
+\index{mouse.h@{mouse.h}!mouse\_write@{mouse\_write}}
+\index{mouse\_write@{mouse\_write}!mouse.h@{mouse.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_write()}{mouse\_write()}}
+{\footnotesize\ttfamily int() mouse\+\_\+write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{command }\end{DoxyParamCaption})}
+
+
+
+This function writes a command to the mouse, using the write\+\_\+\+KBC\+\_\+command() function. It tries to write the command a programable number of times, defined by the MAX\+\_\+\+ATTEMPS macro, until it receives an ACK response from the mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & Command to be written\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if no errors occurred, 1 otherwise 
+\end{DoxyReturn}

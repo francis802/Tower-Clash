@@ -1,0 +1,35 @@
+\doxysection{config.\+h File Reference}
+\hypertarget{config_8h}{}\label{config_8h}\index{config.h@{config.h}}
+
+
+File containing the game configuration variables, such as the game frequency, the video mode and the double buffer mode enabler.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{config_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{config_8h_a710f214d9e57597d4b73a7d4f8c59035}\label{config_8h_a710f214d9e57597d4b73a7d4f8c59035} 
+\#define {\bfseries GAME\+\_\+\+FREQUENCY}~30
+\begin{DoxyCompactList}\small\item\em This macro defines the game frequency, i.\+e, frames per second. \end{DoxyCompactList}\item 
+\Hypertarget{config_8h_a3c5cde2577e877adb5f9827014079dde}\label{config_8h_a3c5cde2577e877adb5f9827014079dde} 
+\#define {\bfseries VIDEO\+\_\+\+MODE}~0x115
+\begin{DoxyCompactList}\small\item\em This macro defines the video mode to be used by the game. \end{DoxyCompactList}\item 
+\Hypertarget{config_8h_a0a44bcc21b57d1d8c467aa0d70259a04}\label{config_8h_a0a44bcc21b57d1d8c467aa0d70259a04} 
+\#define {\bfseries DOUBLE\+\_\+\+BUFFER}~1
+\begin{DoxyCompactList}\small\item\em This macro defines whether the double buffer mode should be enabled or not. If it is enabled, the game will use a double buffer to draw the sprites, which will be copied to the video memory at the end of each frame. If it is disabled, the game will draw the sprites directly to the video memory. \end{DoxyCompactList}\item 
+\Hypertarget{config_8h_a6801baa546c6112d19eb095111d24720}\label{config_8h_a6801baa546c6112d19eb095111d24720} 
+\#define {\bfseries GRAVITY}~2.\+2
+\begin{DoxyCompactList}\small\item\em This macro defines the gravity value, which is used to calculate the vertical speed of the projectile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File containing the game configuration variables, such as the game frequency, the video mode and the double buffer mode enabler. 
+

@@ -1,0 +1,26 @@
+\doxysection{graphics.\+h}
+\hypertarget{graphics_8h_source}{}\label{graphics_8h_source}\index{controller/video/graphics.h@{controller/video/graphics.h}}
+\mbox{\hyperlink{graphics_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ \_\_GRAPHICS\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ \_\_GRAPHICS\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_v_b_e_8h}{VBE.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ vbe\_mode\_info\_t\ mode\_info;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00025\ int\ (\mbox{\hyperlink{graphics_8h_a967432a6c8128a907b937b0f3f4b4472}{set\_graphic\_mode}})(uint16\_t\ submode);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00037\ int\ (\mbox{\hyperlink{graphics_8h_ac50005645b76a08eff8126607633420f}{set\_frame\_buffer}})(uint16\_t\ mode,\ uint8\_t**\ frame\_buffer);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00050\ int\ (\mbox{\hyperlink{graphics_8h_a950e17209d152e8a40ec064a0b201b25}{draw\_pixel}})(uint16\_t\ x,\ uint16\_t\ y,\ uint32\_t\ color,\ uint8\_t*\ frame\_buffer);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ int\ (draw\_rectangle)(uint16\_t\ x,\ uint16\_t\ y,\ uint16\_t\ width,\ uint16\_t\ height,\ uint32\_t\ color,\ uint8\_t*\ frame\_buffer);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ int\ (draw\_line)(uint16\_t\ x,\ uint16\_t\ y,\ uint16\_t\ len,\ uint32\_t\ color,\ uint8\_t*\ frame\_buffer);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

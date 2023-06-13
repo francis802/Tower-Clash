@@ -1,0 +1,150 @@
+\doxysection{model.\+h}
+\hypertarget{model_8h_source}{}\label{model_8h_source}\index{model/model.h@{model/model.h}}
+\mbox{\hyperlink{model_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ \_LCOM\_MODEL\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ \_LCOM\_MODEL\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <minix/sysutil.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{keyboard_2_k_b_c_8h}{controller/keyboard/KBC.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{mouse_8h}{controller/mouse/mouse.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{graphics_8h}{controller/video/graphics.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{rtc_8h}{controller/rtc/rtc.h}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/cursores/cursor\_normal.XPM"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/cursores/cursor\_click.XPM"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/montanhas/montanha1.XPM"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/montanhas/montanha2.XPM"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/montanhas/montanha3.XPM"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/montanhas/montanha4.XPM"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/nuvens/nuvem\_1.XPM"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/nuvens/nuvem\_2.XPM"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/botoes/name.XPM"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/botoes/play\_button.XPM"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/botoes/multiplayer\_button.XPM"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/botoes/help\_button.XPM"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/botoes/quit\_button.XPM"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/botoes/resume\_button.XPM"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/botoes/play\_again\_button.XPM"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/botoes/menu\_button.XPM"{}}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/botoes/game\_over.XPM"{}}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/botoes/game\_paused.XPM"{}}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/botoes/back\_button.XPM"{}}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/botoes/purple\_won.XPM"{}}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/botoes/orange\_won.XPM"{}}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/torres/roxa\_0.XPM"{}}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/torres/roxa\_15.XPM"{}}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/torres/roxa\_30.XPM"{}}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/torres/roxa\_45.XPM"{}}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/torres/roxa\_60.XPM"{}}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/torres/roxa\_75.XPM"{}}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/torres/roxa\_90.XPM"{}}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/torres/laranja\_0.XPM"{}}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/torres/laranja\_15.XPM"{}}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/torres/laranja\_30.XPM"{}}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/torres/laranja\_45.XPM"{}}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/torres/laranja\_60.XPM"{}}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/torres/laranja\_75.XPM"{}}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/torres/laranja\_90.XPM"{}}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_01.XPM"{}}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_02.XPM"{}}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_03.XPM"{}}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_04.XPM"{}}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_05.XPM"{}}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_06.XPM"{}}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_07.XPM"{}}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_08.XPM"{}}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_09.XPM"{}}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_10.XPM"{}}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_11.XPM"{}}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_12.XPM"{}}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_13.XPM"{}}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_14.XPM"{}}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_15.XPM"{}}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_16.XPM"{}}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_17.XPM"{}}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_18.XPM"{}}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_19.XPM"{}}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_20.XPM"{}}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_21.XPM"{}}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_22.XPM"{}}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_23.XPM"{}}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_24.XPM"{}}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_25.XPM"{}}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_26.XPM"{}}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_27.XPM"{}}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_28.XPM"{}}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_29.XPM"{}}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_30.XPM"{}}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_31.XPM"{}}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_32.XPM"{}}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_33.XPM"{}}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_34.XPM"{}}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_35.XPM"{}}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_36.XPM"{}}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_37.XPM"{}}}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_38.XPM"{}}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_39.XPM"{}}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_40.XPM"{}}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_41.XPM"{}}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_42.XPM"{}}}
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_43.XPM"{}}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_44.XPM"{}}}
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_45.XPM"{}}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_46.XPM"{}}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_47.XPM"{}}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_48.XPM"{}}}
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_49.XPM"{}}}
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_50.XPM"{}}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/barra\_velocidade/barra\_velocidade\_51.XPM"{}}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/health\_bar/health\_bar\_00.XPM"{}}}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/health\_bar/health\_bar\_20.XPM"{}}}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/health\_bar/health\_bar\_40.XPM"{}}}
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/health\_bar/health\_bar\_60.XPM"{}}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/health\_bar/health\_bar\_80.XPM"{}}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/health\_bar/health\_bar\_100.XPM"{}}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/cannon\_ball.XPM"{}}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/help\_page1.XPM"{}}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#include\ "{}xpm\_800x600/help\_page2.XPM"{}}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{view_8h}{view/view.h}}"{}}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sprite_8h}{model/sprite.h}}"{}}}
+\DoxyCodeLine{00117\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{config_8h}{config.h}}"{}}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00123\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00124\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ RUNNING,}
+\DoxyCodeLine{00126\ \ \ \ \ EXIT,}
+\DoxyCodeLine{00127\ \}\ \mbox{\hyperlink{model_8h_aa51313be2faacb739a18fdeecefbac75}{SystemState}};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00132\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00133\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ START,}
+\DoxyCodeLine{00135\ \ \ \ \ GAME,}
+\DoxyCodeLine{00136\ \ \ \ \ MULTIPLAYER,}
+\DoxyCodeLine{00137\ \ \ \ \ PAUSE,}
+\DoxyCodeLine{00138\ \ \ \ \ HELP,}
+\DoxyCodeLine{00139\ \ \ \ \ END}
+\DoxyCodeLine{00140\ \}\ \mbox{\hyperlink{model_8h_aa3041ae4242c0dd57a126d17505443b2}{MenuState}};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00147\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{model_8h_a2e7983abedd3fae94a24b4775a97210f}{update\_timer\_state}}();}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00153\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{model_8h_aacf177f660c44528fc3926b3cd69fb88}{update\_keyboard\_state}}();}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00159\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{model_8h_aa577e78e2462033d486b5d8fa64c7bec}{update\_mouse\_state}}();}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00164\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{model_8h_a7a7f686f195175fa6acf9d2414cf0450}{update\_buttons\_state}}();}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00169\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{model_8h_a1a2176ba0e79afd72c7bc2bf91b978f3}{update\_rtc\_state}}();}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00175\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{model_8h_a834200084177d31e41dd9b28754a3312}{setup\_sprites}}();}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00180\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{model_8h_a8fdbc6c7bfca3ef4a8800a3cdc19d932}{destroy\_sprites}}();}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

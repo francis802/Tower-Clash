@@ -1,0 +1,221 @@
+\doxysection{controller/rtc/rtc.h File Reference}
+\hypertarget{rtc_8h}{}\label{rtc_8h}\index{controller/rtc/rtc.h@{controller/rtc/rtc.h}}
+
+
+Provides macros and functions to use the RTC.  
+
+
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+Include dependency graph for rtc.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{rtc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{rtc_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structreal__time__info}{real\+\_\+time\+\_\+info}}
+\begin{DoxyCompactList}\small\item\em Struct that stores the real time information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{rtc_8h_ab54f2d18b47b47a59f718e16099446e8}\label{rtc_8h_ab54f2d18b47b47a59f718e16099446e8} 
+\#define {\bfseries RTC\+\_\+\+MASK}~5
+\item 
+\Hypertarget{rtc_8h_a910ac5f2c1b4016e433f9832358a1816}\label{rtc_8h_a910ac5f2c1b4016e433f9832358a1816} 
+\#define {\bfseries IRQ\+\_\+\+RTC}~8
+\item 
+\Hypertarget{rtc_8h_ac7ccdd8e98d8f7fdad8dfe99c467d5d8}\label{rtc_8h_ac7ccdd8e98d8f7fdad8dfe99c467d5d8} 
+\#define {\bfseries REGISTER\+\_\+\+INPUT}~0x70
+\item 
+\Hypertarget{rtc_8h_a5e3f3a35c56673c2a54d9f4eadb759a9}\label{rtc_8h_a5e3f3a35c56673c2a54d9f4eadb759a9} 
+\#define {\bfseries REGISTER\+\_\+\+OUTPUT}~0x71
+\item 
+\Hypertarget{rtc_8h_a79c0bb250ad248af29b370b20dd1fb29}\label{rtc_8h_a79c0bb250ad248af29b370b20dd1fb29} 
+\#define {\bfseries REGISTER\+\_\+\+UPDATING}~10
+\item 
+\Hypertarget{rtc_8h_ac261047d18c2505db97b38b7b157f1fd}\label{rtc_8h_ac261047d18c2505db97b38b7b157f1fd} 
+\#define {\bfseries REGISTER\+\_\+\+COUNTING}~11
+\item 
+\Hypertarget{rtc_8h_a48fcf4f2eeef6769d588168d4ac2ab0e}\label{rtc_8h_a48fcf4f2eeef6769d588168d4ac2ab0e} 
+\#define {\bfseries SECONDS}~0
+\item 
+\Hypertarget{rtc_8h_a84be9dcfa5a172ee83121620d15c8e29}\label{rtc_8h_a84be9dcfa5a172ee83121620d15c8e29} 
+\#define {\bfseries MINUTES}~2
+\item 
+\Hypertarget{rtc_8h_a212d0f839f6f7ca43ccde311f93d5892}\label{rtc_8h_a212d0f839f6f7ca43ccde311f93d5892} 
+\#define {\bfseries HOURS}~4
+\item 
+\Hypertarget{rtc_8h_a509a01c55cbe47386fe24602b7c7fda1}\label{rtc_8h_a509a01c55cbe47386fe24602b7c7fda1} 
+\#define {\bfseries DAY}~7
+\item 
+\Hypertarget{rtc_8h_a3729d06495d9713592f79f3122c9e677}\label{rtc_8h_a3729d06495d9713592f79f3122c9e677} 
+\#define {\bfseries MONTH}~8
+\item 
+\Hypertarget{rtc_8h_a5871356500f559add06ea81d60331b1b}\label{rtc_8h_a5871356500f559add06ea81d60331b1b} 
+\#define {\bfseries YEAR}~9
+\item 
+\Hypertarget{rtc_8h_acc166508d5cfbf4100f8622ce97f4985}\label{rtc_8h_acc166508d5cfbf4100f8622ce97f4985} 
+\#define {\bfseries BINARY}~BIT(2)
+\item 
+\Hypertarget{rtc_8h_ae07bc1582ec2a0d53dd74350b5a19c5e}\label{rtc_8h_ae07bc1582ec2a0d53dd74350b5a19c5e} 
+\#define {\bfseries UPDATING}~BIT(7)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{rtc_8h_a9e961a2e8e8309e4fd490ac35f68a293}\label{rtc_8h_a9e961a2e8e8309e4fd490ac35f68a293} 
+void {\bfseries rtc\+\_\+setup} ()
+\begin{DoxyCompactList}\small\item\em This function check the RTC mode and updates the real time information. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8h_abb90a7b2307300874b2529d94aafacca}{rtc\+\_\+subscribe\+\_\+interrupts}} ()
+\begin{DoxyCompactList}\small\item\em Subscribes the RTC interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8h_ae0e5cb47db8832528abb7dc48255cd3a}{rtc\+\_\+unsubscribe\+\_\+interrupts}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes the RTC interrupts. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8h_a8e4030507a3afad53e5b80851f90d193}{rtc\+\_\+output}} (uint8\+\_\+t command, uint8\+\_\+t \texorpdfstring{$\ast$}{*}output)
+\begin{DoxyCompactList}\small\item\em This function writes a command to the RTC and reads the output and stores it in the output variable. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8h_a47d5762e49eb390b04a09fc319c4e047}{rtc\+\_\+is\+\_\+updating}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the RTC is updating. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8h_a5873dc86f56c4a2a8ea8f7faf07ef798}{rtc\+\_\+is\+\_\+binary}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the RTC is in binary mode. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8h_ad9799f13e0670cb1748baae02f15ca5a}{rtc\+\_\+is\+\_\+bcd}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the RTC is in BCD mode. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rtc_8h_ae22bdeb51eb630e1d579dfc1cd1b2f11}{rtc\+\_\+update\+\_\+time}} ()
+\begin{DoxyCompactList}\small\item\em This function updates the real time information by reading the RTC output using the \doxylink{rtc_8h_a8e4030507a3afad53e5b80851f90d193}{rtc\+\_\+output()} function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8h_a891509fed13e0cac396e9c401f887d72}{to\+\_\+binary}} (uint8\+\_\+t bcd\+\_\+number)
+\begin{DoxyCompactList}\small\item\em Auxiliary function to convert a 8-\/bit BCD number to an 8-\/bit binary number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides macros and functions to use the RTC. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{rtc_8h_ad9799f13e0670cb1748baae02f15ca5a}\label{rtc_8h_ad9799f13e0670cb1748baae02f15ca5a} 
+\index{rtc.h@{rtc.h}!rtc\_is\_bcd@{rtc\_is\_bcd}}
+\index{rtc\_is\_bcd@{rtc\_is\_bcd}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{rtc\_is\_bcd()}{rtc\_is\_bcd()}}
+{\footnotesize\ttfamily int rtc\+\_\+is\+\_\+bcd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the RTC is in BCD mode. 
+
+\begin{DoxyReturn}{Returns}
+int 0 if no errors occurred, 1 otherwise 
+\end{DoxyReturn}
+\Hypertarget{rtc_8h_a5873dc86f56c4a2a8ea8f7faf07ef798}\label{rtc_8h_a5873dc86f56c4a2a8ea8f7faf07ef798} 
+\index{rtc.h@{rtc.h}!rtc\_is\_binary@{rtc\_is\_binary}}
+\index{rtc\_is\_binary@{rtc\_is\_binary}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{rtc\_is\_binary()}{rtc\_is\_binary()}}
+{\footnotesize\ttfamily int rtc\+\_\+is\+\_\+binary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the RTC is in binary mode. 
+
+\begin{DoxyReturn}{Returns}
+int 0 if no errors occurred, 1 otherwise 
+\end{DoxyReturn}
+\Hypertarget{rtc_8h_a47d5762e49eb390b04a09fc319c4e047}\label{rtc_8h_a47d5762e49eb390b04a09fc319c4e047} 
+\index{rtc.h@{rtc.h}!rtc\_is\_updating@{rtc\_is\_updating}}
+\index{rtc\_is\_updating@{rtc\_is\_updating}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{rtc\_is\_updating()}{rtc\_is\_updating()}}
+{\footnotesize\ttfamily int rtc\+\_\+is\+\_\+updating (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the RTC is updating. 
+
+\begin{DoxyReturn}{Returns}
+int 0 if no errors occurred, 1 otherwise 
+\end{DoxyReturn}
+\Hypertarget{rtc_8h_a8e4030507a3afad53e5b80851f90d193}\label{rtc_8h_a8e4030507a3afad53e5b80851f90d193} 
+\index{rtc.h@{rtc.h}!rtc\_output@{rtc\_output}}
+\index{rtc\_output@{rtc\_output}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{rtc\_output()}{rtc\_output()}}
+{\footnotesize\ttfamily int rtc\+\_\+output (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{command,  }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{output }\end{DoxyParamCaption})}
+
+
+
+This function writes a command to the RTC and reads the output and stores it in the output variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & Command to be outputted \\
+\hline
+{\em output} & Pointer to the variable where the output will be stored\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if no errors occurred, 1 otherwise 
+\end{DoxyReturn}
+\Hypertarget{rtc_8h_abb90a7b2307300874b2529d94aafacca}\label{rtc_8h_abb90a7b2307300874b2529d94aafacca} 
+\index{rtc.h@{rtc.h}!rtc\_subscribe\_interrupts@{rtc\_subscribe\_interrupts}}
+\index{rtc\_subscribe\_interrupts@{rtc\_subscribe\_interrupts}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{rtc\_subscribe\_interrupts()}{rtc\_subscribe\_interrupts()}}
+{\footnotesize\ttfamily int rtc\+\_\+subscribe\+\_\+interrupts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Subscribes the RTC interrupts. 
+
+\begin{DoxyReturn}{Returns}
+int 0 if no errors occurred, 1 otherwise 
+\end{DoxyReturn}
+\Hypertarget{rtc_8h_ae0e5cb47db8832528abb7dc48255cd3a}\label{rtc_8h_ae0e5cb47db8832528abb7dc48255cd3a} 
+\index{rtc.h@{rtc.h}!rtc\_unsubscribe\_interrupts@{rtc\_unsubscribe\_interrupts}}
+\index{rtc\_unsubscribe\_interrupts@{rtc\_unsubscribe\_interrupts}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{rtc\_unsubscribe\_interrupts()}{rtc\_unsubscribe\_interrupts()}}
+{\footnotesize\ttfamily int rtc\+\_\+unsubscribe\+\_\+interrupts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes the RTC interrupts. 
+
+\begin{DoxyReturn}{Returns}
+int 0 if no errors occurred, 1 otherwise 
+\end{DoxyReturn}
+\Hypertarget{rtc_8h_ae22bdeb51eb630e1d579dfc1cd1b2f11}\label{rtc_8h_ae22bdeb51eb630e1d579dfc1cd1b2f11} 
+\index{rtc.h@{rtc.h}!rtc\_update\_time@{rtc\_update\_time}}
+\index{rtc\_update\_time@{rtc\_update\_time}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{rtc\_update\_time()}{rtc\_update\_time()}}
+{\footnotesize\ttfamily int rtc\+\_\+update\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function updates the real time information by reading the RTC output using the \doxylink{rtc_8h_a8e4030507a3afad53e5b80851f90d193}{rtc\+\_\+output()} function. 
+
+\begin{DoxyReturn}{Returns}
+int 0 if no errors occurred, 1 otherwise 
+\end{DoxyReturn}
+\Hypertarget{rtc_8h_a891509fed13e0cac396e9c401f887d72}\label{rtc_8h_a891509fed13e0cac396e9c401f887d72} 
+\index{rtc.h@{rtc.h}!to\_binary@{to\_binary}}
+\index{to\_binary@{to\_binary}!rtc.h@{rtc.h}}
+\doxysubsubsection{\texorpdfstring{to\_binary()}{to\_binary()}}
+{\footnotesize\ttfamily uint8\+\_\+t to\+\_\+binary (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{bcd\+\_\+number }\end{DoxyParamCaption})}
+
+
+
+Auxiliary function to convert a 8-\/bit BCD number to an 8-\/bit binary number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bcd\+\_\+number} & BCD number to be converted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Converted number 
+\end{DoxyReturn}

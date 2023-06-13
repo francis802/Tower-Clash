@@ -1,0 +1,119 @@
+\doxysection{controller/mouse/i8042.h File Reference}
+\hypertarget{mouse_2i8042_8h}{}\label{mouse_2i8042_8h}\index{controller/mouse/i8042.h@{controller/mouse/i8042.h}}
+
+
+This file contains the definition of the mouse macros to interact with the KBC controller.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{mouse_2i8042_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{mouse_2i8042_8h_a8092843c014fad609c1b01a4604a44a3}\label{mouse_2i8042_8h_a8092843c014fad609c1b01a4604a44a3} 
+\#define {\bfseries IRQ\+\_\+\+KEYBOARD}~1
+\item 
+\Hypertarget{mouse_2i8042_8h_a32ffe73ffc337fbec467ea02948591af}\label{mouse_2i8042_8h_a32ffe73ffc337fbec467ea02948591af} 
+\#define {\bfseries IRQ\+\_\+\+MOUSE}~12
+\item 
+\Hypertarget{mouse_2i8042_8h_a82218ef5fdf988f42e5056a0da2f9fb5}\label{mouse_2i8042_8h_a82218ef5fdf988f42e5056a0da2f9fb5} 
+\#define {\bfseries BREAK\+\_\+\+ESC}~0x81
+\item 
+\Hypertarget{mouse_2i8042_8h_a5573533027e427e3a11b4daa75621598}\label{mouse_2i8042_8h_a5573533027e427e3a11b4daa75621598} 
+\#define {\bfseries MAKE\+\_\+\+CODE}~BIT(7)
+\item 
+\Hypertarget{mouse_2i8042_8h_ab427e6926fcc47eb1c02c1f78162b6f6}\label{mouse_2i8042_8h_ab427e6926fcc47eb1c02c1f78162b6f6} 
+\#define {\bfseries TWO\+\_\+\+BYTES}~0x\+E0
+\item 
+\Hypertarget{mouse_2i8042_8h_a34326f1c6bfccd8b9084c5ae2b4918a1}\label{mouse_2i8042_8h_a34326f1c6bfccd8b9084c5ae2b4918a1} 
+\#define {\bfseries ENABLE\+\_\+\+INT}~BIT(0)
+\item 
+\Hypertarget{mouse_2i8042_8h_aefc48d416c882f06edaf6d01779d4d74}\label{mouse_2i8042_8h_aefc48d416c882f06edaf6d01779d4d74} 
+\#define {\bfseries TIMEOUT\+\_\+\+ERROR}~BIT(6)
+\item 
+\Hypertarget{mouse_2i8042_8h_a81d2ca6759f3f3bf04556b7558aea6bc}\label{mouse_2i8042_8h_a81d2ca6759f3f3bf04556b7558aea6bc} 
+\#define {\bfseries PARITY\+\_\+\+ERROR}~BIT(7)
+\item 
+\Hypertarget{mouse_2i8042_8h_a10313c9dfee4ce9cb293f84b50d14889}\label{mouse_2i8042_8h_a10313c9dfee4ce9cb293f84b50d14889} 
+\#define {\bfseries FULL\+\_\+\+OUT\+\_\+\+BUFFER}~BIT(0)
+\item 
+\Hypertarget{mouse_2i8042_8h_a7eb083dcc1b2aecf91bd8c9108e17b37}\label{mouse_2i8042_8h_a7eb083dcc1b2aecf91bd8c9108e17b37} 
+\#define {\bfseries FULL\+\_\+\+IN\+\_\+\+BUFFER}~BIT(1)
+\item 
+\Hypertarget{mouse_2i8042_8h_a0b4e336aad52f96e65dd212f76675d8d}\label{mouse_2i8042_8h_a0b4e336aad52f96e65dd212f76675d8d} 
+\#define {\bfseries KBC\+\_\+\+STATUS\+\_\+\+REG}~0x64
+\item 
+\Hypertarget{mouse_2i8042_8h_a445f67cfdfb7046efc77f7df5d9835e2}\label{mouse_2i8042_8h_a445f67cfdfb7046efc77f7df5d9835e2} 
+\#define {\bfseries KBC\+\_\+\+IN\+\_\+\+CMD}~0x64
+\item 
+\Hypertarget{mouse_2i8042_8h_ade9c0b4f31cee479afed8b824fff02a0}\label{mouse_2i8042_8h_ade9c0b4f31cee479afed8b824fff02a0} 
+\#define {\bfseries KBC\+\_\+\+OUT\+\_\+\+CMD}~0x60
+\item 
+\Hypertarget{mouse_2i8042_8h_a595a5cad2d3c793963da50865b2c1b47}\label{mouse_2i8042_8h_a595a5cad2d3c793963da50865b2c1b47} 
+\#define {\bfseries KBC\+\_\+\+READ\+\_\+\+CMD}~0x20
+\item 
+\Hypertarget{mouse_2i8042_8h_aaa62a6987753a109d2f7a609ce8b7334}\label{mouse_2i8042_8h_aaa62a6987753a109d2f7a609ce8b7334} 
+\#define {\bfseries KBC\+\_\+\+WRITE\+\_\+\+CMD}~0x60
+\item 
+\Hypertarget{mouse_2i8042_8h_aa554763d6a066605edecacdea834da9b}\label{mouse_2i8042_8h_aa554763d6a066605edecacdea834da9b} 
+\#define {\bfseries WAIT\+\_\+\+KBC}~20000
+\item 
+\Hypertarget{mouse_2i8042_8h_a8ca6d466a780b24900c3e94a5798230f}\label{mouse_2i8042_8h_a8ca6d466a780b24900c3e94a5798230f} 
+\#define {\bfseries MAX\+\_\+\+ATTEMPS}~10
+\item 
+\Hypertarget{mouse_2i8042_8h_a81c0f94add844b0761bd142f7f708431}\label{mouse_2i8042_8h_a81c0f94add844b0761bd142f7f708431} 
+\#define {\bfseries MOUSE\+\_\+\+LB}~BIT(0)
+\item 
+\Hypertarget{mouse_2i8042_8h_a5f47c1d60579c8691054c939c1d7c20e}\label{mouse_2i8042_8h_a5f47c1d60579c8691054c939c1d7c20e} 
+\#define {\bfseries MOUSE\+\_\+\+RB}~BIT(1)
+\item 
+\Hypertarget{mouse_2i8042_8h_a5a934eaadd3536aabe6df0adf6728e8e}\label{mouse_2i8042_8h_a5a934eaadd3536aabe6df0adf6728e8e} 
+\#define {\bfseries MOUSE\+\_\+\+MB}~BIT(2)
+\item 
+\Hypertarget{mouse_2i8042_8h_a73d6572224ad0ac84a8587615cef947c}\label{mouse_2i8042_8h_a73d6572224ad0ac84a8587615cef947c} 
+\#define {\bfseries FIRST\+\_\+\+BYTE}~BIT(3)
+\item 
+\Hypertarget{mouse_2i8042_8h_a726368c7d58dac5edc608a58e2e92660}\label{mouse_2i8042_8h_a726368c7d58dac5edc608a58e2e92660} 
+\#define {\bfseries MOUSE\+\_\+\+X\+\_\+\+SIGNAL}~BIT(4)
+\item 
+\Hypertarget{mouse_2i8042_8h_a4b664cf12fa3048513e4c8b856aefd65}\label{mouse_2i8042_8h_a4b664cf12fa3048513e4c8b856aefd65} 
+\#define {\bfseries MOUSE\+\_\+\+Y\+\_\+\+SIGNAL}~BIT(5)
+\item 
+\Hypertarget{mouse_2i8042_8h_a39f0e19085186976faee23616a2f48b5}\label{mouse_2i8042_8h_a39f0e19085186976faee23616a2f48b5} 
+\#define {\bfseries MOUSE\+\_\+\+X\+\_\+\+OVERFLOW}~BIT(6)
+\item 
+\Hypertarget{mouse_2i8042_8h_a056e214bb9df1114c547e8e712b7619d}\label{mouse_2i8042_8h_a056e214bb9df1114c547e8e712b7619d} 
+\#define {\bfseries MOUSE\+\_\+\+Y\+\_\+\+OVERFLOW}~BIT(7)
+\item 
+\Hypertarget{mouse_2i8042_8h_ad374b510092499b5961d3771abf9c66e}\label{mouse_2i8042_8h_ad374b510092499b5961d3771abf9c66e} 
+\#define {\bfseries DISABLE\+\_\+\+DATA\+\_\+\+REPORT}~0x\+F5
+\item 
+\Hypertarget{mouse_2i8042_8h_a1c22608f41bd715500d0333001079a8a}\label{mouse_2i8042_8h_a1c22608f41bd715500d0333001079a8a} 
+\#define {\bfseries ENABLE\+\_\+\+DATA\+\_\+\+REPORT}~0x\+F4
+\item 
+\Hypertarget{mouse_2i8042_8h_a273372321eef8063b96317d47a3853cc}\label{mouse_2i8042_8h_a273372321eef8063b96317d47a3853cc} 
+\#define {\bfseries ENABLE\+\_\+\+STREAM\+\_\+\+MODE}~0x\+EA
+\item 
+\Hypertarget{mouse_2i8042_8h_a6065e2718e2c8e4a5b5d005cba836cbc}\label{mouse_2i8042_8h_a6065e2718e2c8e4a5b5d005cba836cbc} 
+\#define {\bfseries MOUSE\+\_\+\+READ\+\_\+\+DATA}~0x\+EB
+\item 
+\Hypertarget{mouse_2i8042_8h_a805da0759dba314e6339d8999c44824c}\label{mouse_2i8042_8h_a805da0759dba314e6339d8999c44824c} 
+\#define {\bfseries WRITE\+\_\+\+BYTE\+\_\+\+MOUSE}~0x\+D4
+\item 
+\Hypertarget{mouse_2i8042_8h_a6f6489887e08bff4887d0bc5dcf214d8}\label{mouse_2i8042_8h_a6f6489887e08bff4887d0bc5dcf214d8} 
+\#define {\bfseries ACK}~0x\+FA
+\item 
+\Hypertarget{mouse_2i8042_8h_a958518a45b12053ae33606ee7cb68a55}\label{mouse_2i8042_8h_a958518a45b12053ae33606ee7cb68a55} 
+\#define {\bfseries NACK}~0x\+FE
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definition of the mouse macros to interact with the KBC controller. 
+

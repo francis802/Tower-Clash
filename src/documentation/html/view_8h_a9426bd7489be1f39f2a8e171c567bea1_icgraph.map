@@ -1,0 +1,9 @@
+<map id="player_mechanics" name="player_mechanics">
+<area shape="rect" id="Node000001" title="Player shooting mechanics." alt="" coords="486,5,613,32"/>
+<area shape="rect" id="Node000002" href="$view_8c.html#a7e6baca1b635c8aadd95c4d821cda8fc" title="This function draws the game, in which all other components like the towers, the background and the p..." alt="" coords="351,5,438,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="471,21,439,21,439,16,471,16"/>
+<area shape="rect" id="Node000003" href="$view_8c.html#a8fe6fe827e29e6b0cb98cda00dc38355" title="This function calls one of the other draw functions, depending on the current game state." alt="" coords="186,5,303,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="336,21,304,21,304,16,336,16"/>
+<area shape="rect" id="Node000004" href="$model_8c.html#a2e7983abedd3fae94a24b4775a97210f" title="This function draws a new frame by calling a drawing function from the view.h file...." alt="" coords="5,5,138,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="171,21,138,21,138,16,171,16"/>
+</map>

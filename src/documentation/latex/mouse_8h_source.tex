@@ -1,0 +1,39 @@
+\doxysection{mouse.\+h}
+\hypertarget{mouse_8h_source}{}\label{mouse_8h_source}\index{controller/mouse/mouse.h@{controller/mouse/mouse.h}}
+\mbox{\hyperlink{mouse_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ \_LCOM\_MOUSE\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ \_LCOM\_MOUSE\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ MOUSE\_MASK\ BIT(2)}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <minix/sysutil.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <lcom/lcf.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{mouse_2i8042_8h}{i8042.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{mouse_2_k_b_c_8h}{KBC.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{graphics_8h}{controller/video/graphics.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ uint8\_t\ right\_click;}
+\DoxyCodeLine{00026\ \ \ \ \ uint8\_t\ left\_click;}
+\DoxyCodeLine{00027\ \ \ \ \ int16\_t\ x;}
+\DoxyCodeLine{00028\ \ \ \ \ int16\_t\ y;}
+\DoxyCodeLine{00029\ \}\ \mbox{\hyperlink{struct_mouse_info}{MouseInfo}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ int\ (\mbox{\hyperlink{mouse_8h_a5cab36c12945662a62fe124c448d4d27}{mouse\_subscribe\_interrupts}})();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ int\ (\mbox{\hyperlink{mouse_8h_adaf9bbdd3ddda1b50021f21c37df1c9c}{mouse\_unsubscribe\_interrupts}})();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ void\ (\mbox{\hyperlink{mouse_8h_a210374b50462acdedab00df64d5cea3c}{mouse\_ih}})();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00054\ void\ (\mbox{\hyperlink{mouse_8h_a1538254b8ccba2f68e02cc3d5547722c}{mouse\_sync\_bytes}})();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ void\ (\mbox{\hyperlink{mouse_8h_aa832040dd305ba3a8401cc3a4e6a4cc4}{mouse\_sync\_info}})();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00071\ int\ (\mbox{\hyperlink{mouse_8h_a1703c3c5b61eef30d724b15cafd1d75e}{mouse\_write}})(uint8\_t\ command);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

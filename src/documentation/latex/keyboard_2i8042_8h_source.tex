@@ -1,0 +1,43 @@
+\doxysection{i8042.\+h}
+\hypertarget{keyboard_2i8042_8h_source}{}\label{keyboard_2i8042_8h_source}\index{controller/keyboard/i8042.h@{controller/keyboard/i8042.h}}
+\mbox{\hyperlink{keyboard_2i8042_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ \_LCOM\_I8042\_KEY\_H\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ \_LCOM\_I8042\_KEY\_H\_}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ IRQ\_KEYBOARD\ \ \ \ 1}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ BREAK\_ESC\ \ \ \ \ \ \ 0x81}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MAKE\_CODE\ \ \ \ \ \ \ BIT(7)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ TWO\_BYTES\ \ \ \ \ \ \ 0xE0}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ ENABLE\_INT\ \ \ \ \ \ BIT(0)}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ TIMEOUT\_ERROR\ \ \ BIT(6)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ PARITY\_ERROR\ \ \ \ BIT(7)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ FULL\_OUT\_BUFFER\ BIT(0)}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ FULL\_IN\_BUFFER\ \ BIT(1)}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ KBC\_STATUS\_REG\ \ 0x64}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ KBC\_IN\_CMD\ \ \ \ \ \ 0x64}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ KBC\_OUT\_CMD\ \ \ \ \ 0x60}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ KBC\_READ\_CMD\ \ \ \ 0x20}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ KBC\_WRITE\_CMD\ \ \ 0x60}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ WAIT\_KBC\ \ \ \ \ \ \ \ 20000}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ MAX\_ATTEMPS\ \ \ \ \ 10}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ S\_KEY\ \ \ \ \ \ \ \ \ \ \ 31}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ G\_KEY\ \ \ \ \ \ \ \ \ \ \ 34}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ E\_KEY\ \ \ \ \ \ \ \ \ \ \ 18}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ Q\_KEY\ \ \ \ \ \ \ \ \ \ \ 16}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ SPACE\_KEY\ \ \ \ \ \ \ 57}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ ESC\_KEY\ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ H\_KEY\ \ \ \ \ \ \ \ \ \ \ 35}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ P\_KEY\ \ \ \ \ \ \ \ \ \ \ 25}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ M\_KEY\ \ \ \ \ \ \ \ \ \ \ 50}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ R\_KEY\ \ \ \ \ \ \ \ \ \ \ 19}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ B\_KEY\ \ \ \ \ \ 48}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

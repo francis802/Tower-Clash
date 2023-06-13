@@ -1,0 +1,9 @@
+<map id="controller/keyboard/KBC.h" name="controller/keyboard/KBC.h">
+<area shape="rect" id="Node000001" title="This file contains the definition of the function to interact with the KBC." alt="" coords="108,5,240,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,111,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,51,89,90,86,85,143,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="135,96,213,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="177,49,177,81,171,81,171,49"/>
+<area shape="rect" id="Node000004" href="$keyboard_2i8042_8h.html" title="This file contains the definition of the keyboard macros to interact with the KBC controller." alt="" coords="237,96,300,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="200,47,244,84,241,88,197,51"/>
+</map>

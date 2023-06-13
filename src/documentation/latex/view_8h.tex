@@ -1,0 +1,281 @@
+\doxysection{view/view.h File Reference}
+\hypertarget{view_8h}{}\label{view_8h}\index{view/view.h@{view/view.h}}
+
+
+File containing the functions to draw the game menus, sprites. Also contains the functions to swap and configure the frame buffers.  
+
+
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \"{}config.\+h\"{}}\newline
+{\ttfamily \#include \"{}controller/video/graphics.\+h\"{}}\newline
+{\ttfamily \#include \"{}controller/mouse/mouse.\+h\"{}}\newline
+{\ttfamily \#include \"{}controller/rtc/rtc.\+h\"{}}\newline
+{\ttfamily \#include \"{}model/sprite.\+h\"{}}\newline
+{\ttfamily \#include \"{}model/model.\+h\"{}}\newline
+Include dependency graph for view.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{view_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structvelocity__vector}{velocity\+\_\+vector}}
+\begin{DoxyCompactList}\small\item\em Struct that represents a velocity vector for a sprite. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsprite__pos}{sprite\+\_\+pos}}
+\begin{DoxyCompactList}\small\item\em Struct that represents a sprite position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{view_8h_a8fe6fe827e29e6b0cb98cda00dc38355}\label{view_8h_a8fe6fe827e29e6b0cb98cda00dc38355} 
+void {\bfseries draw\+\_\+new\+\_\+frame} ()
+\begin{DoxyCompactList}\small\item\em This function calls one of the other draw functions, depending on the current game state. \end{DoxyCompactList}\item 
+\Hypertarget{view_8h_a2e293823f22abda1c98f45d8035282d8}\label{view_8h_a2e293823f22abda1c98f45d8035282d8} 
+void {\bfseries draw\+\_\+initial\+\_\+menu} ()
+\begin{DoxyCompactList}\small\item\em This function draws the initial menu, which is the first menu to be displayed when the game starts. \end{DoxyCompactList}\item 
+\Hypertarget{view_8h_a7e6baca1b635c8aadd95c4d821cda8fc}\label{view_8h_a7e6baca1b635c8aadd95c4d821cda8fc} 
+void {\bfseries draw\+\_\+game} ()
+\begin{DoxyCompactList}\small\item\em This function draws the game, in which all other components like the towers, the background and the projectiles are drawn. \end{DoxyCompactList}\item 
+\Hypertarget{view_8h_a4ef1021932b3491a17530d73f0a0d0f8}\label{view_8h_a4ef1021932b3491a17530d73f0a0d0f8} 
+void {\bfseries draw\+\_\+finish\+\_\+menu} ()
+\begin{DoxyCompactList}\small\item\em This function draws the finish menu, which is the menu displayed when the game is over. \end{DoxyCompactList}\item 
+\Hypertarget{view_8h_adf57af8cce7fc24e7c2900722cf77ec3}\label{view_8h_adf57af8cce7fc24e7c2900722cf77ec3} 
+void {\bfseries draw\+\_\+pause\+\_\+menu} ()
+\begin{DoxyCompactList}\small\item\em This function draws the pause menu, which is the menu displayed when the game is paused. \end{DoxyCompactList}\item 
+\Hypertarget{view_8h_a42f4903ab89aff9e3ee0206c52cf710a}\label{view_8h_a42f4903ab89aff9e3ee0206c52cf710a} 
+void {\bfseries draw\+\_\+mouse} ()
+\begin{DoxyCompactList}\small\item\em This function draws the mouse, which is a sprite that follows the mouse position. It changes the mouse sprite depending on the current game state and the mouse position on the screen. \end{DoxyCompactList}\item 
+\Hypertarget{view_8h_a8ab69794cf17a9227b095a78e7ae88c0}\label{view_8h_a8ab69794cf17a9227b095a78e7ae88c0} 
+void {\bfseries draw\+\_\+help\+\_\+page} ()
+\begin{DoxyCompactList}\small\item\em This function draws the help page, which contains the game instructions. \end{DoxyCompactList}\item 
+\Hypertarget{view_8h_a0d157d997329169f936545f9985e334b}\label{view_8h_a0d157d997329169f936545f9985e334b} 
+void {\bfseries swap\+\_\+buffers} ()
+\begin{DoxyCompactList}\small\item\em This function swaps the main frame buffer with the secondary frame buffer, when the double buffer mode is enabled. \end{DoxyCompactList}\item 
+\Hypertarget{view_8h_a39ad944a9c99eecebef79b21fc740a51}\label{view_8h_a39ad944a9c99eecebef79b21fc740a51} 
+void {\bfseries display\+\_\+real\+\_\+time} ()
+\begin{DoxyCompactList}\small\item\em This function prints to the console the current time, in the format YYYY/\+MM/\+DD HH\+:\+MM\+:SS. It uses the RTC to get the current time. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8h_a6db4230a0003a09515d78b790d8ec52d}{draw\+\_\+sprite\+\_\+xpm}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite, int x, int y)
+\begin{DoxyCompactList}\small\item\em This function draws a sprite on the screen, at the given position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{view_8h_a3ad9f04212e7602618a0dd7ad4afbd4e}{set\+\_\+frame\+\_\+buffers}} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em This function allocates the neccessary memory and configures the frame buffers. It can create one or two frame buffers, depending on the mode selected. It also configures the sky color to be drawn, since this function is called only once at the start of the game, so the sky color is only set once. \end{DoxyCompactList}\item 
+\Hypertarget{view_8h_ad7352c5b06376b56e063f74ec428b109}\label{view_8h_ad7352c5b06376b56e063f74ec428b109} 
+void {\bfseries set\+\_\+cannonball\+\_\+initial\+\_\+position} (int value)
+\begin{DoxyCompactList}\small\item\em This function sets the cannonball initial position, which is the position where the cannonball is fired from. It depends on the current cannon position and the tower that is shooting. \end{DoxyCompactList}\item 
+\Hypertarget{view_8h_acf6adca346e656459d13d259f02e50c5}\label{view_8h_acf6adca346e656459d13d259f02e50c5} 
+void {\bfseries update\+\_\+cannonball\+\_\+position} ()
+\begin{DoxyCompactList}\small\item\em This function updates the cannonball position, depending on the current cannonball position, the cannonball velocity vector and the elapsed time since the cannonball was fired. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{view_8h_a5aa0addce6b1072e57d8fc617e64260c}{collision\+\_\+detected}} ()
+\begin{DoxyCompactList}\small\item\em This function detects colisions between the cannonball and the towers. It checks if the cannonball is inside the tower hitbox. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_a9426bd7489be1f39f2a8e171c567bea1}{player\+\_\+mechanics}} ()
+\begin{DoxyCompactList}\small\item\em Player shooting mechanics. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_ab8d579a16a91d68148117bedaaec55ab}{bot\+\_\+mechanics}} ()
+\begin{DoxyCompactList}\small\item\em Bot shooting mechanics. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_a871d23d604b17dc3750bf0e1a4eb52f7}{end\+Of\+Game}} ()
+\item 
+void \mbox{\hyperlink{view_8h_a8aa2d1103d001181cf3b159626f11341}{set\+Game\+Variables}} ()
+\begin{DoxyCompactList}\small\item\em Set up game variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{view_8h_ae4f8919a54f1d6a46fa1e66a569fd014}{draw\+\_\+health\+\_\+bars}} ()
+\begin{DoxyCompactList}\small\item\em Draws the health bars. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File containing the functions to draw the game menus, sprites. Also contains the functions to swap and configure the frame buffers. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{view_8h_ab8d579a16a91d68148117bedaaec55ab}\label{view_8h_ab8d579a16a91d68148117bedaaec55ab} 
+\index{view.h@{view.h}!bot\_mechanics@{bot\_mechanics}}
+\index{bot\_mechanics@{bot\_mechanics}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{bot\_mechanics()}{bot\_mechanics()}}
+{\footnotesize\ttfamily void bot\+\_\+mechanics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Bot shooting mechanics. 
+
+Aux function to use when the bot is about to shoot the cannonball. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_ab8d579a16a91d68148117bedaaec55ab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_ab8d579a16a91d68148117bedaaec55ab_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{view_8h_a5aa0addce6b1072e57d8fc617e64260c}\label{view_8h_a5aa0addce6b1072e57d8fc617e64260c} 
+\index{view.h@{view.h}!collision\_detected@{collision\_detected}}
+\index{collision\_detected@{collision\_detected}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{collision\_detected()}{collision\_detected()}}
+{\footnotesize\ttfamily bool collision\+\_\+detected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function detects colisions between the cannonball and the towers. It checks if the cannonball is inside the tower hitbox. 
+
+\begin{DoxyReturn}{Returns}
+true if a colision was detected, false otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a5aa0addce6b1072e57d8fc617e64260c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{view_8h_ae4f8919a54f1d6a46fa1e66a569fd014}\label{view_8h_ae4f8919a54f1d6a46fa1e66a569fd014} 
+\index{view.h@{view.h}!draw\_health\_bars@{draw\_health\_bars}}
+\index{draw\_health\_bars@{draw\_health\_bars}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{draw\_health\_bars()}{draw\_health\_bars()}}
+{\footnotesize\ttfamily void draw\+\_\+health\+\_\+bars (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the health bars. 
+
+This function draws the health bars of the towers. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{view_8h_ae4f8919a54f1d6a46fa1e66a569fd014_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_ae4f8919a54f1d6a46fa1e66a569fd014_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{view_8h_a6db4230a0003a09515d78b790d8ec52d}\label{view_8h_a6db4230a0003a09515d78b790d8ec52d} 
+\index{view.h@{view.h}!draw\_sprite\_xpm@{draw\_sprite\_xpm}}
+\index{draw\_sprite\_xpm@{draw\_sprite\_xpm}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{draw\_sprite\_xpm()}{draw\_sprite\_xpm()}}
+{\footnotesize\ttfamily int draw\+\_\+sprite\+\_\+xpm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sprite,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+This function draws a sprite on the screen, at the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & \doxylink{struct_sprite}{Sprite} to be drawn \\
+\hline
+{\em x} & top left X coordinate of the sprite \\
+\hline
+{\em y} & top left Y coordinate of the sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if no errors occurred, 1 otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a6db4230a0003a09515d78b790d8ec52d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{view_8h_a871d23d604b17dc3750bf0e1a4eb52f7}\label{view_8h_a871d23d604b17dc3750bf0e1a4eb52f7} 
+\index{view.h@{view.h}!endOfGame@{endOfGame}}
+\index{endOfGame@{endOfGame}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{endOfGame()}{endOfGame()}}
+{\footnotesize\ttfamily void end\+Of\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if game is over
+
+Aux function that checks if the game is over and who won. ~\newline
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a871d23d604b17dc3750bf0e1a4eb52f7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{view_8h_a9426bd7489be1f39f2a8e171c567bea1}\label{view_8h_a9426bd7489be1f39f2a8e171c567bea1} 
+\index{view.h@{view.h}!player\_mechanics@{player\_mechanics}}
+\index{player\_mechanics@{player\_mechanics}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{player\_mechanics()}{player\_mechanics()}}
+{\footnotesize\ttfamily void player\+\_\+mechanics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Player shooting mechanics. 
+
+Aux function to use when a player is about to shoot the cannonball. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a9426bd7489be1f39f2a8e171c567bea1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a9426bd7489be1f39f2a8e171c567bea1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{view_8h_a3ad9f04212e7602618a0dd7ad4afbd4e}\label{view_8h_a3ad9f04212e7602618a0dd7ad4afbd4e} 
+\index{view.h@{view.h}!set\_frame\_buffers@{set\_frame\_buffers}}
+\index{set\_frame\_buffers@{set\_frame\_buffers}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{set\_frame\_buffers()}{set\_frame\_buffers()}}
+{\footnotesize\ttfamily int set\+\_\+frame\+\_\+buffers (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+This function allocates the neccessary memory and configures the frame buffers. It can create one or two frame buffers, depending on the mode selected. It also configures the sky color to be drawn, since this function is called only once at the start of the game, so the sky color is only set once. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Mode to be set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if no errors occurred, 1 otherwise 
+\end{DoxyReturn}
+\Hypertarget{view_8h_a8aa2d1103d001181cf3b159626f11341}\label{view_8h_a8aa2d1103d001181cf3b159626f11341} 
+\index{view.h@{view.h}!setGameVariables@{setGameVariables}}
+\index{setGameVariables@{setGameVariables}!view.h@{view.h}}
+\doxysubsubsection{\texorpdfstring{setGameVariables()}{setGameVariables()}}
+{\footnotesize\ttfamily void set\+Game\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set up game variables. 
+
+This function sets up the game variables, variables that will be used during the game. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{view_8h_a8aa2d1103d001181cf3b159626f11341_icgraph}
+\end{center}
+\end{figure}

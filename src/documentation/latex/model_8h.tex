@@ -1,0 +1,167 @@
+\doxysection{model/model.h File Reference}
+\hypertarget{model_8h}{}\label{model_8h}\index{model/model.h@{model/model.h}}
+
+
+This file contains the definition of the System\+State and Menu\+State enum and the functions to update the game state.  
+
+
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include \"{}controller/keyboard/\+KBC.\+h\"{}}\newline
+{\ttfamily \#include \"{}controller/mouse/mouse.\+h\"{}}\newline
+{\ttfamily \#include \"{}controller/video/graphics.\+h\"{}}\newline
+{\ttfamily \#include \"{}controller/rtc/rtc.\+h\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/cursores/cursor\+\_\+normal.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/cursores/cursor\+\_\+click.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/montanhas/montanha1.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/montanhas/montanha2.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/montanhas/montanha3.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/montanhas/montanha4.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/nuvens/nuvem\+\_\+1.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/nuvens/nuvem\+\_\+2.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/botoes/name.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/botoes/play\+\_\+button.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/botoes/multiplayer\+\_\+button.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/botoes/help\+\_\+button.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/botoes/quit\+\_\+button.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/botoes/resume\+\_\+button.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/botoes/play\+\_\+again\+\_\+button.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/botoes/menu\+\_\+button.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/botoes/game\+\_\+over.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/botoes/game\+\_\+paused.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/botoes/back\+\_\+button.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/botoes/purple\+\_\+won.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/botoes/orange\+\_\+won.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/torres/roxa\+\_\+0.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/torres/roxa\+\_\+15.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/torres/roxa\+\_\+30.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/torres/roxa\+\_\+45.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/torres/roxa\+\_\+60.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/torres/roxa\+\_\+75.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/torres/roxa\+\_\+90.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/torres/laranja\+\_\+0.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/torres/laranja\+\_\+15.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/torres/laranja\+\_\+30.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/torres/laranja\+\_\+45.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/torres/laranja\+\_\+60.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/torres/laranja\+\_\+75.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/torres/laranja\+\_\+90.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+01.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+02.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+03.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+04.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+05.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+06.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+07.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+08.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+09.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+10.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+11.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+12.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+13.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+14.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+15.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+16.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+17.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+18.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+19.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+20.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+21.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+22.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+23.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+24.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+25.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+26.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+27.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+28.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+29.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+30.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+31.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+32.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+33.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+34.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+35.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+36.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+37.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+38.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+39.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+40.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+41.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+42.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+43.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+44.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+45.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+46.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+47.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+48.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+49.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+50.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/barra\+\_\+velocidade/barra\+\_\+velocidade\+\_\+51.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/health\+\_\+bar/health\+\_\+bar\+\_\+00.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/health\+\_\+bar/health\+\_\+bar\+\_\+20.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/health\+\_\+bar/health\+\_\+bar\+\_\+40.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/health\+\_\+bar/health\+\_\+bar\+\_\+60.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/health\+\_\+bar/health\+\_\+bar\+\_\+80.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/health\+\_\+bar/health\+\_\+bar\+\_\+100.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/cannon\+\_\+ball.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/help\+\_\+page1.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}xpm\+\_\+800x600/help\+\_\+page2.\+XPM\"{}}\newline
+{\ttfamily \#include \"{}view/view.\+h\"{}}\newline
+{\ttfamily \#include \"{}model/sprite.\+h\"{}}\newline
+{\ttfamily \#include \"{}config.\+h\"{}}\newline
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{model_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{model_8h_aa51313be2faacb739a18fdeecefbac75}\label{model_8h_aa51313be2faacb739a18fdeecefbac75} 
+enum \mbox{\hyperlink{model_8h_aa51313be2faacb739a18fdeecefbac75}{System\+State}} \{ {\bfseries RUNNING}
+, {\bfseries EXIT}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum that represents the game states. \end{DoxyCompactList}\item 
+\Hypertarget{model_8h_aa3041ae4242c0dd57a126d17505443b2}\label{model_8h_aa3041ae4242c0dd57a126d17505443b2} 
+enum \mbox{\hyperlink{model_8h_aa3041ae4242c0dd57a126d17505443b2}{Menu\+State}} \{ \newline
+{\bfseries START}
+, {\bfseries GAME}
+, {\bfseries MULTIPLAYER}
+, {\bfseries PAUSE}
+, \newline
+{\bfseries HELP}
+, {\bfseries END}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum that represents the menu states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{model_8h_a2e7983abedd3fae94a24b4775a97210f}\label{model_8h_a2e7983abedd3fae94a24b4775a97210f} 
+void {\bfseries update\+\_\+timer\+\_\+state} ()
+\begin{DoxyCompactList}\small\item\em This function draws a new frame by calling a drawing function from the \doxylink{view_8h}{view.\+h} file. If the double buffer is enabled, it copies the buffer to the VRAM and then draws the new frame. \end{DoxyCompactList}\item 
+\Hypertarget{model_8h_aacf177f660c44528fc3926b3cd69fb88}\label{model_8h_aacf177f660c44528fc3926b3cd69fb88} 
+void {\bfseries update\+\_\+keyboard\+\_\+state} ()
+\begin{DoxyCompactList}\small\item\em This function updates the game and/or menu state when some specific keys are pressed while the game is in a specific menu and game states. \end{DoxyCompactList}\item 
+\Hypertarget{model_8h_aa577e78e2462033d486b5d8fa64c7bec}\label{model_8h_aa577e78e2462033d486b5d8fa64c7bec} 
+void {\bfseries update\+\_\+mouse\+\_\+state} ()
+\begin{DoxyCompactList}\small\item\em This function does the necessary work to process and store the information from the 3 bytes of the mouse packet and then updates not only the game\textquotesingle{}s buttons state, but also the game\textquotesingle{}s own state. \end{DoxyCompactList}\item 
+\Hypertarget{model_8h_a7a7f686f195175fa6acf9d2414cf0450}\label{model_8h_a7a7f686f195175fa6acf9d2414cf0450} 
+void {\bfseries update\+\_\+buttons\+\_\+state} ()
+\begin{DoxyCompactList}\small\item\em This function updates the game\textquotesingle{}s buttons state by checking if the mouse is over a button and if the left button is pressed. \end{DoxyCompactList}\item 
+\Hypertarget{model_8h_a1a2176ba0e79afd72c7bc2bf91b978f3}\label{model_8h_a1a2176ba0e79afd72c7bc2bf91b978f3} 
+void {\bfseries update\+\_\+rtc\+\_\+state} ()
+\begin{DoxyCompactList}\small\item\em This function updates the current time by fetching the information from the RTC after a definable timer 0 interrupts. \end{DoxyCompactList}\item 
+\Hypertarget{model_8h_a834200084177d31e41dd9b28754a3312}\label{model_8h_a834200084177d31e41dd9b28754a3312} 
+void {\bfseries setup\+\_\+sprites} ()
+\begin{DoxyCompactList}\small\item\em This function creates all the sprites by calling the create\+\_\+sprite function from the \doxylink{sprite_8h}{sprite.\+h} file with the respective XPM location and the sprite\textquotesingle{}s initial position. \end{DoxyCompactList}\item 
+\Hypertarget{model_8h_a8fdbc6c7bfca3ef4a8800a3cdc19d932}\label{model_8h_a8fdbc6c7bfca3ef4a8800a3cdc19d932} 
+void {\bfseries destroy\+\_\+sprites} ()
+\begin{DoxyCompactList}\small\item\em This function destroys all the sprites by calling the destroy\+\_\+sprite function from the \doxylink{sprite_8h}{sprite.\+h} file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definition of the System\+State and Menu\+State enum and the functions to update the game state. 
+

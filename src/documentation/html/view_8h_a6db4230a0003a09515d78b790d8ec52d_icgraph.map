@@ -1,0 +1,32 @@
+<map id="draw_sprite_xpm" name="draw_sprite_xpm">
+<area shape="rect" id="Node000001" title="This function draws a sprite on the screen, at the given position." alt="" coords="927,157,1046,184"/>
+<area shape="rect" id="Node000002" href="$view_8c.html#a4ef1021932b3491a17530d73f0a0d0f8" title="This function draws the finish menu, which is the menu displayed when the game is over." alt="" coords="351,5,475,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="962,148,925,113,902,97,878,84,826,64,771,48,661,29,558,20,476,19,476,14,559,15,661,23,773,43,828,59,880,79,905,93,928,109,966,144"/>
+<area shape="rect" id="Node000005" href="$view_8c.html#ae4f8919a54f1d6a46fa1e66a569fd014" title="Draws the health bars." alt="" coords="727,309,850,336"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="972,198,935,250,909,277,880,300,851,313,849,308,878,295,906,273,931,246,968,195"/>
+<area shape="rect" id="Node000007" href="$view_8c.html#a8ab69794cf17a9227b095a78e7ae88c0" title="This function draws the help page, which contains the game instructions." alt="" coords="356,56,470,83"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="950,152,916,134,878,120,767,95,654,80,552,73,471,71,471,66,552,68,655,75,768,90,880,115,918,129,952,147"/>
+<area shape="rect" id="Node000008" href="$view_8c.html#a2e293823f22abda1c98f45d8035282d8" title="This function draws the initial menu, which is the first menu to be displayed when the game starts." alt="" coords="524,107,649,133"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="919,156,879,148,756,133,649,125,649,120,757,128,879,143,920,151"/>
+<area shape="rect" id="Node000009" href="$view_8c.html#adf57af8cce7fc24e7c2900722cf77ec3" title="This function draws the pause menu, which is the menu displayed when the game is paused." alt="" coords="724,157,853,184"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="912,173,853,173,853,168,912,168"/>
+<area shape="rect" id="Node000010" href="$view_8c.html#a9426bd7489be1f39f2a8e171c567bea1" title="Player shooting mechanics." alt="" coords="523,208,650,235"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="920,191,879,199,758,213,650,221,650,216,757,208,879,193,919,185"/>
+<area shape="rect" id="Node000011" href="$view_8c.html#acf6adca346e656459d13d259f02e50c5" title="This function updates the cannonball position, depending on the current cannonball position,..." alt="" coords="698,259,879,285"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="957,195,921,219,880,242,836,261,834,256,878,238,918,215,954,191"/>
+<area shape="rect" id="Node000003" href="$view_8c.html#a8fe6fe827e29e6b0cb98cda00dc38355" title="This function calls one of the other draw functions, depending on the current game state." alt="" coords="186,107,303,133"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="363,41,352,46,303,78,264,108,261,104,300,74,350,42,360,36"/>
+<area shape="rect" id="Node000004" href="$model_8c.html#a2e7983abedd3fae94a24b4775a97210f" title="This function draws a new frame by calling a drawing function from the view.h file...." alt="" coords="5,107,138,133"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="171,123,138,123,138,117,171,117"/>
+<area shape="rect" id="Node000006" href="$view_8c.html#a7e6baca1b635c8aadd95c4d821cda8fc" title="This function draws the game, in which all other components like the towers, the background and the p..." alt="" coords="370,233,457,260"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="712,325,621,318,571,311,523,300,476,283,437,263,439,258,478,278,524,295,572,305,621,313,712,320"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="381,226,262,136,265,132,384,222"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="353,90,292,109,291,104,352,85"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="509,123,303,123,303,117,509,117"/>
+<area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="708,166,303,128,304,123,709,161"/>
+<area shape="poly" id="edge14_Node000010_Node000006" title=" " alt="" coords="509,235,457,243,457,238,509,230"/>
+<area shape="poly" id="edge18_Node000011_Node000010" title=" " alt="" coords="717,257,642,238,643,233,719,252"/>
+<area shape="rect" id="Node000012" href="$view_8c.html#ab8d579a16a91d68148117bedaaec55ab" title="Bot shooting mechanics." alt="" coords="532,259,641,285"/>
+<area shape="poly" id="edge16_Node000011_Node000012" title=" " alt="" coords="683,275,642,275,642,269,683,269"/>
+<area shape="poly" id="edge17_Node000012_Node000006" title=" " alt="" coords="516,264,457,256,458,250,517,259"/>
+</map>

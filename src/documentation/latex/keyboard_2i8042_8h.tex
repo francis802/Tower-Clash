@@ -1,0 +1,104 @@
+\doxysection{controller/keyboard/i8042.h File Reference}
+\hypertarget{keyboard_2i8042_8h}{}\label{keyboard_2i8042_8h}\index{controller/keyboard/i8042.h@{controller/keyboard/i8042.h}}
+
+
+This file contains the definition of the keyboard macros to interact with the KBC controller.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{keyboard_2i8042_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{keyboard_2i8042_8h_a8092843c014fad609c1b01a4604a44a3}\label{keyboard_2i8042_8h_a8092843c014fad609c1b01a4604a44a3} 
+\#define {\bfseries IRQ\+\_\+\+KEYBOARD}~1
+\item 
+\Hypertarget{keyboard_2i8042_8h_a82218ef5fdf988f42e5056a0da2f9fb5}\label{keyboard_2i8042_8h_a82218ef5fdf988f42e5056a0da2f9fb5} 
+\#define {\bfseries BREAK\+\_\+\+ESC}~0x81
+\item 
+\Hypertarget{keyboard_2i8042_8h_a5573533027e427e3a11b4daa75621598}\label{keyboard_2i8042_8h_a5573533027e427e3a11b4daa75621598} 
+\#define {\bfseries MAKE\+\_\+\+CODE}~BIT(7)
+\item 
+\Hypertarget{keyboard_2i8042_8h_ab427e6926fcc47eb1c02c1f78162b6f6}\label{keyboard_2i8042_8h_ab427e6926fcc47eb1c02c1f78162b6f6} 
+\#define {\bfseries TWO\+\_\+\+BYTES}~0x\+E0
+\item 
+\Hypertarget{keyboard_2i8042_8h_a34326f1c6bfccd8b9084c5ae2b4918a1}\label{keyboard_2i8042_8h_a34326f1c6bfccd8b9084c5ae2b4918a1} 
+\#define {\bfseries ENABLE\+\_\+\+INT}~BIT(0)
+\item 
+\Hypertarget{keyboard_2i8042_8h_aefc48d416c882f06edaf6d01779d4d74}\label{keyboard_2i8042_8h_aefc48d416c882f06edaf6d01779d4d74} 
+\#define {\bfseries TIMEOUT\+\_\+\+ERROR}~BIT(6)
+\item 
+\Hypertarget{keyboard_2i8042_8h_a81d2ca6759f3f3bf04556b7558aea6bc}\label{keyboard_2i8042_8h_a81d2ca6759f3f3bf04556b7558aea6bc} 
+\#define {\bfseries PARITY\+\_\+\+ERROR}~BIT(7)
+\item 
+\Hypertarget{keyboard_2i8042_8h_a10313c9dfee4ce9cb293f84b50d14889}\label{keyboard_2i8042_8h_a10313c9dfee4ce9cb293f84b50d14889} 
+\#define {\bfseries FULL\+\_\+\+OUT\+\_\+\+BUFFER}~BIT(0)
+\item 
+\Hypertarget{keyboard_2i8042_8h_a7eb083dcc1b2aecf91bd8c9108e17b37}\label{keyboard_2i8042_8h_a7eb083dcc1b2aecf91bd8c9108e17b37} 
+\#define {\bfseries FULL\+\_\+\+IN\+\_\+\+BUFFER}~BIT(1)
+\item 
+\Hypertarget{keyboard_2i8042_8h_a0b4e336aad52f96e65dd212f76675d8d}\label{keyboard_2i8042_8h_a0b4e336aad52f96e65dd212f76675d8d} 
+\#define {\bfseries KBC\+\_\+\+STATUS\+\_\+\+REG}~0x64
+\item 
+\Hypertarget{keyboard_2i8042_8h_a445f67cfdfb7046efc77f7df5d9835e2}\label{keyboard_2i8042_8h_a445f67cfdfb7046efc77f7df5d9835e2} 
+\#define {\bfseries KBC\+\_\+\+IN\+\_\+\+CMD}~0x64
+\item 
+\Hypertarget{keyboard_2i8042_8h_ade9c0b4f31cee479afed8b824fff02a0}\label{keyboard_2i8042_8h_ade9c0b4f31cee479afed8b824fff02a0} 
+\#define {\bfseries KBC\+\_\+\+OUT\+\_\+\+CMD}~0x60
+\item 
+\Hypertarget{keyboard_2i8042_8h_a595a5cad2d3c793963da50865b2c1b47}\label{keyboard_2i8042_8h_a595a5cad2d3c793963da50865b2c1b47} 
+\#define {\bfseries KBC\+\_\+\+READ\+\_\+\+CMD}~0x20
+\item 
+\Hypertarget{keyboard_2i8042_8h_aaa62a6987753a109d2f7a609ce8b7334}\label{keyboard_2i8042_8h_aaa62a6987753a109d2f7a609ce8b7334} 
+\#define {\bfseries KBC\+\_\+\+WRITE\+\_\+\+CMD}~0x60
+\item 
+\Hypertarget{keyboard_2i8042_8h_aa554763d6a066605edecacdea834da9b}\label{keyboard_2i8042_8h_aa554763d6a066605edecacdea834da9b} 
+\#define {\bfseries WAIT\+\_\+\+KBC}~20000
+\item 
+\Hypertarget{keyboard_2i8042_8h_a8ca6d466a780b24900c3e94a5798230f}\label{keyboard_2i8042_8h_a8ca6d466a780b24900c3e94a5798230f} 
+\#define {\bfseries MAX\+\_\+\+ATTEMPS}~10
+\item 
+\Hypertarget{keyboard_2i8042_8h_a38916d959d471a2781d390910271b6b5}\label{keyboard_2i8042_8h_a38916d959d471a2781d390910271b6b5} 
+\#define {\bfseries S\+\_\+\+KEY}~31
+\item 
+\Hypertarget{keyboard_2i8042_8h_a82f468fa5d01499717ebb6c2336ffa14}\label{keyboard_2i8042_8h_a82f468fa5d01499717ebb6c2336ffa14} 
+\#define {\bfseries G\+\_\+\+KEY}~34
+\item 
+\Hypertarget{keyboard_2i8042_8h_ab0b927b3a09eaa32f8a4d36d822e38e3}\label{keyboard_2i8042_8h_ab0b927b3a09eaa32f8a4d36d822e38e3} 
+\#define {\bfseries E\+\_\+\+KEY}~18
+\item 
+\Hypertarget{keyboard_2i8042_8h_a3d8aa05967b559c3e0d0f9f5ce3eacfb}\label{keyboard_2i8042_8h_a3d8aa05967b559c3e0d0f9f5ce3eacfb} 
+\#define {\bfseries Q\+\_\+\+KEY}~16
+\item 
+\Hypertarget{keyboard_2i8042_8h_abdcd784aab1ab72e5b041fef85328927}\label{keyboard_2i8042_8h_abdcd784aab1ab72e5b041fef85328927} 
+\#define {\bfseries SPACE\+\_\+\+KEY}~57
+\item 
+\Hypertarget{keyboard_2i8042_8h_a9b4f59fc9220530978f12905fe51b1d0}\label{keyboard_2i8042_8h_a9b4f59fc9220530978f12905fe51b1d0} 
+\#define {\bfseries ESC\+\_\+\+KEY}~1
+\item 
+\Hypertarget{keyboard_2i8042_8h_ab454741f32a91feca20d2dda1c15e3dc}\label{keyboard_2i8042_8h_ab454741f32a91feca20d2dda1c15e3dc} 
+\#define {\bfseries H\+\_\+\+KEY}~35
+\item 
+\Hypertarget{keyboard_2i8042_8h_a694eafa85c419c8ad91dc382650eb481}\label{keyboard_2i8042_8h_a694eafa85c419c8ad91dc382650eb481} 
+\#define {\bfseries P\+\_\+\+KEY}~25
+\item 
+\Hypertarget{keyboard_2i8042_8h_aefb17eeead0329261a24903952388df9}\label{keyboard_2i8042_8h_aefb17eeead0329261a24903952388df9} 
+\#define {\bfseries M\+\_\+\+KEY}~50
+\item 
+\Hypertarget{keyboard_2i8042_8h_a75ac3acba95812a4be896446cd3051b4}\label{keyboard_2i8042_8h_a75ac3acba95812a4be896446cd3051b4} 
+\#define {\bfseries R\+\_\+\+KEY}~19
+\item 
+\Hypertarget{keyboard_2i8042_8h_ad17571f139195fb7361f6293b791744d}\label{keyboard_2i8042_8h_ad17571f139195fb7361f6293b791744d} 
+\#define {\bfseries B\+\_\+\+KEY}~48
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the definition of the keyboard macros to interact with the KBC controller. 
+
